@@ -34,4 +34,6 @@ public class Task {
     private List<Contract> contracts = new ArrayList<>();
     @OneToOne(mappedBy = "task")
     private Rating rating;
+    @ManyToMany(mappedBy = "tasks")
+    private List<User> users = new ArrayList<>();
 }

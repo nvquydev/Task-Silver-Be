@@ -51,6 +51,11 @@ public class User {
 
     @OneToMany(mappedBy = "employee")
     private List<Contract> contractsAsEmployee = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(name = "user_task",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "task_id"))
+    private List<Task> tasks = new ArrayList<>();
 
     // getters and setters
 }

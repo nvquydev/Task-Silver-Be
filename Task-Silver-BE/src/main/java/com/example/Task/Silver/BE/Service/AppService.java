@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface TaskService {
-    List<Task> findAllTaskByUserId (Long id);
+public interface AppService {
+    List<Task> getTasksByServiceId(Long id);
 }
